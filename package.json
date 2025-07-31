@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "test:token": "dotenv -e .env k6 run core/sistema/Token/token.js",
+    "test:login": "dotenv -e .env k6 run core/sistema/AtendimentoOnline/Login.js",
+    "test:video": "dotenv -e .env k6 run core/sistema/AtendimentoOnline/AtendimentoDeVideo.js",
+    "test:chat": "dotenv -e .env k6 run core/sistema/AtendimentoOnline/AtendimentoDeChat.js",
+    "local:token": "dotenv -e .env.local k6 run core/sistema/Token/token.js",
+    "local:login": "dotenv -e .env.local k6 run core/sistema/AtendimentoOnline/Login.js",
+    "local:video": "dotenv -e .env.local k6 run core/sistema/AtendimentoOnline/AtendimentoDeVideo.js",
+    "local:chat": "dotenv -e .env.local k6 run core/sistema/AtendimentoOnline/AtendimentoDeChat.js"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^10.0.0"
+  },
+  "dependencies": {
+    "prettier": "^3.6.2"
+  }
+}

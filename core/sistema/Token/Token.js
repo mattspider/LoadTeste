@@ -1,18 +1,24 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
-import { API_URL, USERNAME, PASSWORD,GRANT_TYPE} from './config.js';
+
 
 export let options = {
     stages: [
         { duration: '1m', target: 10 },
         { duration: '3m', target: 20 }
-
     ],
 };
 
 export default function GerarToken() {
-    const url = API_URL;
-    const payload = `username=${USERNAME}&password=${PASSWORD}&grant_type=${GRANT_TYPE}`;
+    const username = __ENV.EMPRESA;
+    const password = __ENV.HASH;
+    const url = __ENV.TOKEN_URL;
+    const grant_type = __ENV.GRANT_TYPE;
+    const payload = 
+        `username=${encodeURIComponent(username)}&` +
+        `password=${encodeURIComponent(password)}&` +
+        `grant_type=${encodeURIComponent(grant_type)}`;
+;
 
     const params = {
         headers: {
