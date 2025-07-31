@@ -36,12 +36,13 @@ O intuito deste projeto é auxiliar nos testes de carga da empresa. Portanto, qu
 
 No entanto, como em todo projeto, faz-se necessário seguir um padrão. Quando você for desenvolver um novo teste, sugiro adotar o padrão definido para garantir maior legibilidade. Os testes devem seguir a seguinte estrutura de pastas:
 
-core > sistema > "nome do módulo" > ArquivoDoTeste.js
+core > sistema > "nome do módulo" > ArquivoDoTeste.js/
+
 O módulo refere-se a cada área de desenvolvimento da aplicação, como temos na API. Por exemplo, o módulo de teleconsulta: tudo o que envolver teleconsulta deve estar dentro deste módulo e em seus respectivos arquivos de teste. Ou seja:
 
 o teste de agendar consulta deve estar em AgendarConsulta.js
 
-o teste de agenda profissional, em AgendarProfissional.js
+o teste de agenda profissional, em AgendaProfissional.js
 
 Além disso, após desenvolver novos testes, você deve adicionar as variáveis de ambiente utilizadas no arquivo .env, sem incluir os parâmetros reais. O formato deve ser o seguinte:
 
