@@ -50,4 +50,4 @@ VARIAVEL_TESTE=###
 
 Também é necessário criar o comando para executar esse teste. Ele deve ser adicionado no arquivo package.json, com uma versão para execução local e outra com os dados reais de produção. Já existem comandos nesse arquivo que podem ser utilizados como exemplo.
 
-Por fim, é importante criar um arquivo .gitignore para que o seu .env.local não seja rastreado. Esse arquivo .gitignore também deve estar versionado no repositório.
+Por fim, é importante criar um arquivo .gitignore para que o seu .env.local não seja rastreado. Esse arquivo .gitignore também deve estar registrado dentro dele mesmo, para igualmente não ser rastreado.
