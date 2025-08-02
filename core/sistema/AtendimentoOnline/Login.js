@@ -6,8 +6,11 @@ export let options = {
     stages: [
         { duration: '1m', target: 1 },
         { duration: '3m', target: 1 }
-
     ],
+    cloud: {
+    projectID: 3790641,
+    name: 'Login',
+    }
 };
 
 export default function RealizarLogin() {

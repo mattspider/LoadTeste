@@ -5,15 +5,23 @@ import { check, sleep } from 'k6';
 export let options = {
     stages: [
         { duration: '1m', target: 10 },
-        { duration: '3m', target: 20 }
+        { duration: '3m', target: 20 },
     ],
+    cloud: {
+    projectID: 3790641,
+    name: 'Gerar Token LH API',
+    }
 };
 
 export default function GerarToken() {
     const username = __ENV.EMPRESA;
+    console.log(username);
     const password = __ENV.HASH;
+    console.log(password);
     const url = __ENV.TOKEN_URL;
+    console.log(url);
     const grant_type = __ENV.GRANT_TYPE;
+    console.log(grant_type);
     const payload = 
         `username=${encodeURIComponent(username)}&` +
         `password=${encodeURIComponent(password)}&` +

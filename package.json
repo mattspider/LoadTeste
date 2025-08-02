@@ -7,7 +7,11 @@
     "local:token": "dotenv -e .env.local k6 run core/sistema/Token/token.js",
     "local:login": "dotenv -e .env.local k6 run core/sistema/AtendimentoOnline/Login.js",
     "local:video": "dotenv -e .env.local k6 run core/sistema/AtendimentoOnline/AtendimentoDeVideo.js",
-    "local:chat": "dotenv -e .env.local k6 run core/sistema/AtendimentoOnline/AtendimentoDeChat.js"
+    "local:chat": "dotenv -e .env.local k6 run core/sistema/AtendimentoOnline/AtendimentoDeChat.js",
+    "cloud:token": "k6 cloud run core/sistema/Token/token.js",
+    "cloud:login": "k6 cloud run core/sistema/AtendimentoOnline/Login.js",
+    "cloud:video": "k6 cloud run core/sistema/AtendimentoOnline/AtendimentoDeVideo.js",
+    "cloud:chat": "k6 cloud run core/sistema/AtendimentoOnline/AtendimentoDeChat.js"
   },
   "devDependencies": {
     "dotenv-cli": "^10.0.0"
